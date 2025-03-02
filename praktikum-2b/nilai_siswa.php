@@ -1,9 +1,10 @@
 <?php
-/*
-- MENANGKAP DATA YANG DI-INPUT
-*/
-
-
+$proses = $_POST['proses'];
+$nama_siswa = $_POST['nama'];
+$mata_kuliah = $_POST['matkul'];
+$nilai_uts = $_POST['nilai_uts'];
+$nilai_uas = $_POST['nilai_uas'];
+$nilai_tugas = $_POST['nilai_tugas'];
 
 /*
 - Mendefinisikan Variabel
@@ -12,14 +13,10 @@
 - Predikat
 */
 
-
-
 /*
 - MENENTUKAN LULUS ATAU TIDAK MENGGUNAKAN IF ELSE
 - SISWA DINYATAKAN LULUS JIKA NILAI TOTAL dengan presentase 30% UTS, 35% UAS dan TUGAS 35% melebihi 55
 */
-
-
 
 // MENENTUKAN GRADE NILAI MENGGUNAKAN SYNTAX IF ELSE MULTIKONDISI
 /*
@@ -31,8 +28,6 @@
 - Grade I : Jika Nilai Akhir < 0 atau Nilai Akhir > 100
 */
 
-
-
 // MENENTUKAN PREDIKAT NILAI MENGGUNAKAN SYNTAX SWITCH
 /*
 - Predikat Sangat Kurang : Jika Grade E
@@ -43,8 +38,13 @@
 - Predikat Tidak Ada : Jika Grade I
 */
 
-
 // MENCETAK HASIL
-// if (!empty($proses)) {
-//     echo 'Proses : ' . $proses;
-// }
+if (!empty($proses)) {
+    echo 'Proses : ' . $proses;
+    echo '<br/>Nama : ' . $nama_siswa;
+    echo '<br/>Mata Kuliah : ' . $mata_kuliah;
+    echo '<br/>Nilai UTS : ' . $nilai_uts;
+    echo '<br/>Nilai UAS : ' . $nilai_uas;
+    echo '<br/>Nilai Tugas Praktikum : ' . $nilai_tugas;
+    // Mencetak Nilai Akhir, Status, Grade, dan Predikat
+}
